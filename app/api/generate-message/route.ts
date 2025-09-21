@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Name is required" }, { status: 400 })
     }
 
-    const prompt = `Crea una frase romántica (sin mencionar frases como: mi amor) e inspiradora de máximo 25 palabras en español para una mujer llamada ${name}; busca referencias de escritores o frases celebres para realizar la imagen. La frase debe estar relacionada con flores y ser muy dulce y poética. Solo responde con la frase, sin comillas ni explicaciones adicionales.`
+    const prompt = `Crea una frase romántica (sin mencionar frases cursis) e inspiradora de máximo 25 palabras en español para una mujer llamada ${name}; busca referencias de escritos o frases celebres para realizar la frase. La frase debe estar relacionada con flores y ser poética. Solo responde con la frase, sin comillas ni explicaciones adicionales.`
 
     const { text } = await generateText({
       model: google("gemini-2.0-flash"),
