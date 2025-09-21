@@ -27,7 +27,7 @@ export function FlowerAnimation({ onComplete }: FlowerAnimationProps) {
         <div className="relative w-48 h-48 mx-auto mb-8">
           <Image src="/images/sunflower.png" alt="Sunflower" fill className="object-contain animate-pulse" priority />
         </div>
-        <h1 className="font-playfair text-4xl font-bold text-foreground mb-2">Flores para Ella</h1>
+        <h1 className="font-playfair text-4xl font-bold text-foreground mb-2">Flores para ti</h1>
         <p className="font-source-sans text-muted-foreground text-lg">Creando algo especial...</p>
       </div>
     </div>

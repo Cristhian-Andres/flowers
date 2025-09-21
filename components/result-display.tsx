@@ -48,7 +48,7 @@ export function ResultDisplay({ userName, message, imageUrl, onStartOver }: Resu
 
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText(`${message}\n\n✿ Creado en Flores para Ella ✿`)
+      await navigator.clipboard.writeText(`${message}\n\n✿ Creado en Flores para ti ✿`)
       // Could add a toast notification here
     } catch (error) {
       console.error("Error copying to clipboard:", error)
@@ -62,7 +62,7 @@ export function ResultDisplay({ userName, message, imageUrl, onStartOver }: Resu
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <SunflowerIcon className="w-8 h-8" />
-            <h1 className="font-playfair text-2xl font-bold text-foreground">Flores para Ella</h1>
+            <h1 className="font-playfair text-2xl font-bold text-foreground"></h1>
           </div>
           <Button variant="outline" onClick={onStartOver} className="flex items-center gap-2 bg-transparent">
             <RotateCcw className="w-4 h-4" />
@@ -102,7 +102,7 @@ export function ResultDisplay({ userName, message, imageUrl, onStartOver }: Resu
                     <Heart className="w-4 h-4 text-primary ml-2" />
                   </div>
                   <p className="font-playfair text-xl font-bold text-center leading-relaxed text-balance">{message}</p>
-                  <p className="font-source-sans text-sm text-center mt-3 opacity-80">✿ Flores para Ella ✿</p>
+                  <p className="font-source-sans text-sm text-center mt-3 opacity-80">✿</p>
                 </div>
               </div>
             </div>
@@ -146,11 +146,7 @@ export function ResultDisplay({ userName, message, imageUrl, onStartOver }: Resu
                 )}
 
                 <div className="text-center space-y-2">
-                  <p className="text-sm text-muted-foreground">Tu mensaje personalizado con flor única seleccionada</p>
-                  <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
-                    <ImageIcon className="w-3 h-3" />
-                    <span>Diseño floral artístico</span>
-                  </div>
+                  <p className="text-sm text-muted-foreground"></p>
                 </div>
               </div>
             </CardContent>
@@ -170,7 +166,7 @@ export function ResultDisplay({ userName, message, imageUrl, onStartOver }: Resu
         <div className="container mx-auto px-4 py-6">
           <div className="text-center space-y-2">
             <p className="font-source-sans text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Flores para Ella
+              © {new Date().getFullYear()} <a href="https://www.instagram.com/cristhian_lunaa/" className="hover:underline">| cristhian_lunaa</a>
             </p>
             <SocialLinks />
           </div>

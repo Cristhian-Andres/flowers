@@ -18,13 +18,13 @@ const sourceSans = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-  title: "Flores para Ella - Mensajes Románticos Personalizados",
+  title: "Flores para ti",
   description: "Crea mensajes románticos personalizados con flores hermosas usando IA",
   generator: "Cristhian.dev",
   keywords: ["flores", "mensajes románticos", "IA", "personalizado", "amor"],
   authors: [{ name: "Flores para Ella" }],
   openGraph: {
-    title: "Flores para Ella - Mensajes Románticos Personalizados",
+    title: "Flores para ti",
     description: "Crea mensajes románticos personalizados con flores hermosas usando IA",
     type: "website",
     locale: "es_ES",
