@@ -10,7 +10,11 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Name is required" }, { status: 400 })
     }
 
-    const prompt = `Crea una frase romántica (sin mencionar frases cursis) e inspiradora de máximo 25 palabras en español para una mujer llamada ${name}; busca referencias de escritos o frases celebres para realizar la frase. La frase debe estar relacionada con flores y ser poética. Solo responde con la frase, sin comillas ni explicaciones adicionales.`
+    const prompt = `Eres un poeta que crea mensajes románticos inspirados en la literatura universal. Genera una frase original de máximo 25 palabras para ${name} que evoque el estilo de Pablo Neruda o Octavio Paz (sin mencionarlos): elegante, profundo y no cursi (evitar clichés, exceso de dulzura o lenguaje trivial).
+
+Tema central: flores como metáfora de conexión humana, usando lenguaje poético y imágenes sutiles. La frase debe sonar atemporal y literaria, no como un mensaje genérico.
+
+Formato de respuesta: solo el texto de la frase, sin comillas, ni explicaciones, ni el nombre de la persona visible en el texto.`
 
     const { text } = await generateText({
       model: google("gemini-2.0-flash"),
